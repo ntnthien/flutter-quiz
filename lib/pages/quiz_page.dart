@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../utils/question.dart';
 import '../utils/quiz.dart';
 import '../UI/answer_button.dart';
+import '../UI/question_text.dart';
 
 class QuizPage extends StatefulWidget {
   @override
@@ -18,6 +19,7 @@ class QuizPageState extends State<QuizPage> {
         new Column(
           children: <Widget>[
             new AnswerButton(true, () => print("answered true")),
+            new QuestionText("Are you fine???", 1),
             new AnswerButton(false, () => print("answered false"))
           ], // This is main page
         )
