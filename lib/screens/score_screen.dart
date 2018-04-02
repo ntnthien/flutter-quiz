@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import './landing_page.dart';
+import './home_screen.dart';
 
-class ScorePage extends StatelessWidget {
+class ScoreScreen extends StatelessWidget {
   final int _score;
   final int _totalQuestion;
 
-  ScorePage(this._score, this._totalQuestion);
+  ScoreScreen(this._score, this._totalQuestion);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class ScorePage extends StatelessWidget {
             iconSize: 50.0,
             onPressed: () => Navigator.of(context).pushAndRemoveUntil(
                 new MaterialPageRoute(
-                    builder: (BuildContext context) => new LandingPage()),
+                    builder: (BuildContext context) => new HomeScreen()),
                 (Route route) => route == null),
           )
         ],

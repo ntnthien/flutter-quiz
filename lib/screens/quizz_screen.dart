@@ -5,14 +5,14 @@ import '../utils/quiz.dart';
 import '../UI/answer_button.dart';
 import '../UI/question_text.dart';
 import '../UI/result_overlay.dart';
-import './score_page.dart';
+import './score_screen.dart';
 
-class QuizPage extends StatefulWidget {
+class QuizzScreen extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => new QuizPageState();
+  State<StatefulWidget> createState() => new QuizzScreenState();
 }
 
-class QuizPageState extends State<QuizPage> {
+class QuizzScreenState extends State<QuizzScreen> {
   Question _currentQuestion;
   Quiz quiz = new Quiz([
     new Question("Elon Musk is human", false),
@@ -56,7 +56,7 @@ class QuizPageState extends State<QuizPage> {
                 Navigator.of(context).pushAndRemoveUntil(
                     new MaterialPageRoute(
                         builder: (BuildContext context) =>
-                            new ScorePage(quiz.score, quiz.length)),
+                            new ScoreScreen(quiz.score, quiz.length)),
                     (Route route) => route == null);
               }
               _currentQuestion = quiz.nextQuestion;
